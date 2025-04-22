@@ -22,7 +22,7 @@ class RandomPhotos extends Component {
   fetchData = async () => {
     try {
       const data = await fetch(
-        `https://api.unsplash.com/search/photos?page=${this.state.page}&query=office&client_id=${this.state.client_id}&per_page=6`
+        `https://api.unsplash.com/search/photos?page=${this.state.page}&query=nature&client_id=${this.state.client_id}&per_page=6`
       );
       const res = await data.json();
       this.setState({ allData: res.results });
@@ -65,7 +65,7 @@ class RandomPhotos extends Component {
                   </a>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                     <p className="text-white text-sm truncate">
-                      {photos.alt_description || "Office photo"}
+                      {photos.alt_description || "Nature photo"}
                     </p>
                   </div>
                 </div>
