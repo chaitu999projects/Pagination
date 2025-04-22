@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<RandomPhotos />} />
-        <Route path="/about" element={<MorePages />} />
+        <Route path="/more" element={<MorePages />} />
       </Routes>
     </Router>
   );
